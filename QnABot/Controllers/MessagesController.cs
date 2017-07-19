@@ -17,7 +17,7 @@ namespace QnABot
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Microsoft.Bot.Connector.Activity activity)
         {
-            if (activity.Type == ActivityTypes.Message)
+            if (activity.Type == ActivityTypes.Message) // азаза
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
             }
